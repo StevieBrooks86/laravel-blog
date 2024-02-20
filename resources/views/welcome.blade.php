@@ -10,7 +10,9 @@
 
 </head>
 <body>
-    <p>Hello World!</p>
+    <h1>Stevie's Fascinating Laravel Blog:</h1>
+
+    <p>This site will somehow be a work of genius, rivalled only by my own ability to reproduce.</p>
 
     <a href="/posts">
         <button>See Posts</button>
