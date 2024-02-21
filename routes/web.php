@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,16 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/posts', function () {
-    return view('posts');
-});
-
-Route::get('/posts/{post}', function ($slug) {
-    $post = file_get_contents(__DIR__ . "/../resources/posts/{$slug}.html");
-
-    return view('post', [
-        'post' => $post
+Route::get('posts', function() {
+//    ddd($posts);
+    return view('posts', [
+        'posts' => Post::all()
     ]);
 });
 
+Route::get('posts/{post}', function($slug) {
 
+    return view('post', [
+        'post' => Post::find($slug)
+    ]);
+});

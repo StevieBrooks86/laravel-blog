@@ -8,8 +8,6 @@
     <title>Post</title>
 </head>
 <body>
-    <article>
-        <?php echo $post; ?>
-    </article>
+    <?php echo $post; ?>
 </body>
 </html>
