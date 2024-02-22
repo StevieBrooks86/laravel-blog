@@ -11,17 +11,19 @@
 
     <h1>Posts</h1>
 
-    <?php foreach ($posts as $post): ?>
+    @foreach ($posts as $post)
+        @dd($loop)
         <article>
-            <a href="posts/<?php echo $post->slug; ?>">
-                <h2><?php echo $post->title; ?></h2>
+            <a href="posts/{{ $post->slug }}">
+                <!--In blade files, can use the double-braces syntax below to echo things-->
+                <h2>{{ $post->title }}</h2>
             </a>
 
             <div>
-                <p><?php echo $post->excerpt; ?></p>
+                <p>{{ $post->excerpt }}</p>
             </div>
         </article>
-    <?php endforeach; ?>
+    @endforeach
 
     <a href="/">
         <button>Return</button>
