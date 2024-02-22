@@ -9,14 +9,22 @@
 </head>
 <body>
 
-    <h1>Posts: Electronic Artists & DJs</h1>
+    <h1>Posts</h1>
 
     <?php foreach ($posts as $post): ?>
-        <?php echo $post; ?>
+        <article>
+            <a href="posts/<?php echo $post->slug; ?>">
+                <h2><?php echo $post->title; ?></h2>
+            </a>
+
+            <div>
+                <p><?php echo $post->excerpt; ?></p>
+            </div>
+        </article>
     <?php endforeach; ?>
 
     <a href="/">
-        <button>Homepage</button>
+        <button>Return</button>
     </a>
 
 </body>

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use Spatie\YamlFrontMatter\YamlFrontMatter;
+use Illuminate\Support\Facades\File;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,16 +20,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('posts', function() {
-//    ddd($posts);
+Route::get('/posts', function () {
+
     return view('posts', [
         'posts' => Post::all()
     ]);
 });
 
-Route::get('posts/{post}', function($slug) {
+Route::get('posts/{post}', function ($slug) {
 
     return view('post', [
-        'post' => Post::find($slug)
+       'post' => Post::find($slug)
     ]);
 });
