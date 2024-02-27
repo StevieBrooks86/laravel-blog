@@ -2,17 +2,20 @@
 
 @section('content')
     <h1>
-        {{ $post->title }}
+        {!! $post->title  !!}
 
     </h1>
 
     <p>
         <em>
-            Date Posted: {{ $post->date }}
+            Date Posted: {{ $post->created_at }}
         </em>
     </p>
 
     <br>
     <!--To escape HTML tags when echoing variables this way, use a single curly bracket and double quotes, as below-->
-    {!! $post->body !!}
+    <div>
+        {!! $post->body !!}
+    </div>
+    <a href="/posts">Go back</a>
 @endsection
