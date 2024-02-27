@@ -7,6 +7,10 @@
     </h1>
 
     <p>
+        <a href="#">{{ $post->category->name }}</a>
+    </p>
+
+    <p>
         <em>
             Date Posted: {{ $post->created_at }}
         </em>

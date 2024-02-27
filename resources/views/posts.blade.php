@@ -11,6 +11,10 @@
                 <h2>{!! $post->title !!}</h2>
             </a>
 
+            <p>
+                <a href="#">{{ $post->category->name }}</a>
+            </p>
+
             <div>
                 <p>{!! $post->body !!}</p>
             </div>
