@@ -5,14 +5,14 @@
 
     @foreach ($posts as $post)
         {{--        @dd($loop)--}}
-        <article>
+        <article style="border-bottom: 1px solid; width: fit-content; padding: 1rem; margin-bottom: 1rem;">
             <a href="posts/{{ $post->slug }}">
                 <!--In blade files, can use the double-braces syntax below to echo things-->
                 <h2>{!! $post->title !!}</h2>
             </a>
 
             <p>
-                <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
+                By <a href="authors/{{ $post->author->username }}">{{ $post->author->name }}</a> in <a href="/categories/{{ $post->category->name }}">{{ $post->category->name }}</a>
             </p>
 
 
